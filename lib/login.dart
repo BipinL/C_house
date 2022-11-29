@@ -1,5 +1,6 @@
 import 'package:c_house/forgot_pass.dart';
 import 'package:c_house/signup.dart';
+import 'package:c_house/util/appcolor.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,7 +18,7 @@ class _LoginviewState extends State<Loginview> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: const Color.fromARGB(255, 63, 151, 227),
+      backgroundColor: AppColor.kBackground,
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
@@ -29,14 +30,14 @@ class _LoginviewState extends State<Loginview> {
             //   height: Get.size.width * 0.75,
             // ),
             TextFormField(
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                   labelText: "enter email",
-                  border: OutlineInputBorder(
+                  border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(25),
                     ),
                   ),
-                  fillColor: Color.fromARGB(255, 145, 195, 236),
+                  fillColor: AppColor.kPrimary,
                   filled: true),
             ),
             const SizedBox(
@@ -47,7 +48,7 @@ class _LoginviewState extends State<Loginview> {
                 labelText: "enter password",
                 border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(25))),
-                fillColor: Color.fromARGB(255, 145, 195, 236),
+                fillColor: AppColor.kPrimary,
                 filled: true,
                 suffixIcon: IconButton(
                     onPressed: () {
@@ -80,8 +81,10 @@ class _LoginviewState extends State<Loginview> {
             Row(
               children: [
                 Expanded(
-                    child: ElevatedButton(
-                        onPressed: () {}, child: const Text("Login"))),
+                    child: MaterialButton(
+                        color: Colors.blue[900],
+                        onPressed: () {},
+                        child: const Text("Login"))),
               ],
             ),
             const SizedBox(

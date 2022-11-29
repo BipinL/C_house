@@ -1,4 +1,5 @@
 import 'package:c_house/login.dart';
+import 'package:c_house/util/appcolor.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,18 +17,18 @@ class _SignUpViewState extends State<SignUpView> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: const Color.fromARGB(255, 63, 151, 227),
+      backgroundColor: AppColor.kBackground,
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextFormField(
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 labelText: "enter email",
-                border: OutlineInputBorder(
+                border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(25))),
-                fillColor: Color.fromARGB(255, 145, 195, 236),
+                fillColor: AppColor.kPrimary,
                 filled: true,
               ),
             ),
@@ -35,11 +36,11 @@ class _SignUpViewState extends State<SignUpView> {
               height: 10,
             ),
             TextFormField(
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 labelText: "enter email",
-                border: OutlineInputBorder(
+                border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(25))),
-                fillColor: Color.fromARGB(255, 145, 195, 236),
+                fillColor: AppColor.kPrimary,
                 filled: true,
               ),
             ),
@@ -51,7 +52,7 @@ class _SignUpViewState extends State<SignUpView> {
                 labelText: "enter password",
                 border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(25))),
-                fillColor: Color.fromARGB(255, 145, 195, 236),
+                fillColor: AppColor.kPrimary,
                 filled: true,
                 suffixIcon: IconButton(
                     onPressed: () {
@@ -69,8 +70,10 @@ class _SignUpViewState extends State<SignUpView> {
             Row(
               children: [
                 Expanded(
-                    child: ElevatedButton(
-                        onPressed: () {}, child: const Text("Signup"))),
+                    child: MaterialButton(
+                        color: Colors.blue[900],
+                        onPressed: () {},
+                        child: const Text("Signup"))),
               ],
             ),
             const SizedBox(

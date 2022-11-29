@@ -1,4 +1,5 @@
 import 'package:c_house/login.dart';
+import 'package:c_house/util/appcolor.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,9 +21,9 @@ class _SplashviewState extends State<Splashview> {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
         child: Scaffold(
-      backgroundColor: Color.fromARGB(255, 63, 151, 227),
+      backgroundColor: AppColor.kBackground,
       body: Center(
         child: Text(
           "WELCOME TO C HOUSE",
