@@ -15,7 +15,7 @@ class _ForgotViewState extends State<ForgotView> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      //  backgroundColor: Color(),
+      backgroundColor: const Color.fromARGB(255, 63, 151, 227),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
@@ -26,6 +26,8 @@ class _ForgotViewState extends State<ForgotView> {
                 labelText: "enter email",
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(25))),
+                fillColor: Color.fromARGB(255, 145, 195, 236),
+                filled: true,
               ),
             ),
             const SizedBox(

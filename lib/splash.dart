@@ -22,11 +22,12 @@ class _SplashviewState extends State<Splashview> {
   Widget build(BuildContext context) {
     return const SafeArea(
         child: Scaffold(
+      backgroundColor: Color.fromARGB(255, 63, 151, 227),
       body: Center(
         child: Text(
           "WELCOME TO C HOUSE",
           style: TextStyle(
-              fontSize: 30, color: Colors.purple, fontStyle: FontStyle.italic),
+              fontSize: 30, color: Colors.black, fontStyle: FontStyle.italic),
         ),
       ),
     ));

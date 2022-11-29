@@ -47,6 +47,8 @@ class _LoginviewState extends State<Loginview> {
                 labelText: "enter password",
                 border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(25))),
+                fillColor: Color.fromARGB(255, 145, 195, 236),
+                filled: true,
                 suffixIcon: IconButton(
                     onPressed: () {
                       x = !x;
