@@ -1,4 +1,5 @@
 import 'package:c_house/forgot_pass.dart';
+import 'package:c_house/home.dart';
 import 'package:c_house/signup.dart';
 import 'package:c_house/util/appcolor.dart';
 import 'package:flutter/material.dart';
@@ -84,7 +85,11 @@ class _LoginviewState extends State<Loginview> {
                     child: MaterialButton(
                         color: Colors.blue[900],
                         onPressed: () {},
-                        child: const Text("Login"))),
+                        child: InkWell(
+                            onTap: () {
+                              Get.to(() => const Homeview());
+                            },
+                            child: const Text("Login")))),
               ],
             ),
             const SizedBox(
