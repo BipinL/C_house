@@ -1,20 +1,18 @@
-import 'package:c_house/forgot_pass.dart';
-import 'package:c_house/home.dart';
-import 'package:c_house/signup.dart';
+import 'package:c_house/view/login.dart';
 import 'package:c_house/util/appcolor.dart';
 import 'package:c_house/widgets/textformfield.dart';
 import 'package:c_house/widgets/virtical_gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Loginview extends StatefulWidget {
-  const Loginview({super.key});
+class SignUpView extends StatefulWidget {
+  const SignUpView({super.key});
 
   @override
-  State<Loginview> createState() => _LoginviewState();
+  State<SignUpView> createState() => _SignUpViewState();
 }
 
-class _LoginviewState extends State<Loginview> {
+class _SignUpViewState extends State<SignUpView> {
   bool x = true;
 
   @override
@@ -27,11 +25,11 @@ class _LoginviewState extends State<Loginview> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Image.asset(
-            //   "images/login.png",
-            //   width: Get.size.width * 0.75,
-            //   height: Get.size.width * 0.75,
-            // ),
+            const Mytextformfield(
+              labelText: "Full name",
+              icon: Icon(Icons.person),
+            ),
+            const Vgap(),
             const Mytextformfield(
               icon: Icon(Icons.email),
               labelText: "enter email",
@@ -51,9 +49,22 @@ class _LoginviewState extends State<Loginview> {
                       print(x);
                       setState(() {});
                     },
-                    icon: const Icon(Icons.visibility_off)),
+                    icon: const Icon(Icons.visibility)),
               ),
               obscureText: x,
+            ),
+            const Vgap(),
+            Row(
+              children: [
+                Expanded(
+                    child: ClipRRect(
+                  borderRadius: BorderRadius.circular(30),
+                  child: MaterialButton(
+                      color: Colors.blue[900],
+                      onPressed: () {},
+                      child: const Text("Signup")),
+                )),
+              ],
             ),
             const Vgap(),
             Row(
@@ -61,39 +72,10 @@ class _LoginviewState extends State<Loginview> {
               children: [
                 InkWell(
                   onTap: (() {
-                    Get.to(() => const ForgotView());
+                    Get.to(() => const Loginview());
                   }),
-                  child: const Text("forgot password ?",
+                  child: const Text("I already have an account ",
                       style: TextStyle(decoration: TextDecoration.underline)),
-                ),
-              ],
-            ),
-            const Vgap(),
-            Row(
-              children: [
-                Expanded(
-                    child: MaterialButton(
-                        color: Colors.blue[900],
-                        onPressed: () {},
-                        child: InkWell(
-                            onTap: () {
-                              Get.to(() => const Homeview());
-                            },
-                            child: const Text("Login")))),
-              ],
-            ),
-            const Vgap(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                InkWell(
-                  onTap: () {
-                    Get.to(() => const SignUpView());
-                  },
-                  child: const Text(
-                    "I haven't an account",
-                    style: TextStyle(decoration: TextDecoration.underline),
-                  ),
                 ),
               ],
             ),

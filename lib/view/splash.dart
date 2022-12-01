@@ -1,4 +1,4 @@
-import 'package:c_house/login.dart';
+import 'package:c_house/view/login.dart';
 import 'package:c_house/util/appcolor.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
