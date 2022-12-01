@@ -1,4 +1,5 @@
 import 'package:c_house/util/appcolor.dart';
+import 'package:c_house/widgets/virtical_gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -31,9 +32,7 @@ class _ForgotViewState extends State<ForgotView> {
                 filled: true,
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
+            const Vgap(),
             Row(
               children: [
                 Expanded(

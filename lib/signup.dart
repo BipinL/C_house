@@ -1,5 +1,7 @@
 import 'package:c_house/login.dart';
 import 'package:c_house/util/appcolor.dart';
+import 'package:c_house/widgets/textformfield.dart';
+import 'package:c_house/widgets/virtical_gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -23,32 +25,19 @@ class _SignUpViewState extends State<SignUpView> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Mytextformfield(
+              labelText: "Full name",
+              icon: Icon(Icons.person),
+            ),
+            const Vgap(),
+            const Mytextformfield(
+              icon: Icon(Icons.email),
+              labelText: "enter email",
+            ),
+            const Vgap(),
             TextFormField(
               decoration: InputDecoration(
-                labelText: "enter email",
-                border: const OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(25))),
-                fillColor: AppColor.kPrimary,
-                filled: true,
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            TextFormField(
-              decoration: InputDecoration(
-                labelText: "enter email",
-                border: const OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(25))),
-                fillColor: AppColor.kPrimary,
-                filled: true,
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            TextFormField(
-              decoration: InputDecoration(
+                prefixIcon: const Icon(Icons.lock),
                 labelText: "enter password",
                 border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(25))),
@@ -64,21 +53,20 @@ class _SignUpViewState extends State<SignUpView> {
               ),
               obscureText: x,
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const Vgap(),
             Row(
               children: [
                 Expanded(
-                    child: MaterialButton(
-                        color: Colors.blue[900],
-                        onPressed: () {},
-                        child: const Text("Signup"))),
+                    child: ClipRRect(
+                  borderRadius: BorderRadius.circular(30),
+                  child: MaterialButton(
+                      color: Colors.blue[900],
+                      onPressed: () {},
+                      child: const Text("Signup")),
+                )),
               ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const Vgap(),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [

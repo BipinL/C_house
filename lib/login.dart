@@ -2,6 +2,8 @@ import 'package:c_house/forgot_pass.dart';
 import 'package:c_house/home.dart';
 import 'package:c_house/signup.dart';
 import 'package:c_house/util/appcolor.dart';
+import 'package:c_house/widgets/textformfield.dart';
+import 'package:c_house/widgets/virtical_gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -30,22 +32,14 @@ class _LoginviewState extends State<Loginview> {
             //   width: Get.size.width * 0.75,
             //   height: Get.size.width * 0.75,
             // ),
+            const Mytextformfield(
+              icon: Icon(Icons.email),
+              labelText: "enter email",
+            ),
+            const Vgap(),
             TextFormField(
               decoration: InputDecoration(
-                  labelText: "enter email",
-                  border: const OutlineInputBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(25),
-                    ),
-                  ),
-                  fillColor: AppColor.kPrimary,
-                  filled: true),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            TextFormField(
-              decoration: InputDecoration(
+                prefixIcon: const Icon(Icons.lock),
                 labelText: "enter password",
                 border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(25))),
@@ -57,13 +51,11 @@ class _LoginviewState extends State<Loginview> {
                       print(x);
                       setState(() {});
                     },
-                    icon: const Icon(Icons.visibility)),
+                    icon: const Icon(Icons.visibility_off)),
               ),
               obscureText: x,
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const Vgap(),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -76,9 +68,7 @@ class _LoginviewState extends State<Loginview> {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const Vgap(),
             Row(
               children: [
                 Expanded(
@@ -92,9 +82,7 @@ class _LoginviewState extends State<Loginview> {
                             child: const Text("Login")))),
               ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const Vgap(),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
