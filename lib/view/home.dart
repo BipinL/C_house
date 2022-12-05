@@ -1,4 +1,5 @@
 import 'package:c_house/util/appcolor.dart';
+import 'package:c_house/view/trending.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -54,7 +55,11 @@ class Homeview extends StatelessWidget {
             ),
 
             //trending
-            const Listlite(title: "Trending", trailing: "See all"),
+            InkWell(
+                onTap: () {
+                  Get.to(() => Trending());
+                },
+                child: const Listlite(title: "Trending", trailing: "See all")),
             ListviewB(price: "Rs.900", products: products),
 
             //categories
