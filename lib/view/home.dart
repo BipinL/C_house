@@ -65,7 +65,7 @@ class Homeview extends StatelessWidget {
             //categories
             const Listlite(title: "Categories", trailing: "See all"),
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(5.0),
               child: Wrap(
                 children: const [
                   Categories(name: "Men"),
