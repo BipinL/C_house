@@ -44,6 +44,20 @@ class Homeview extends StatelessWidget {
         body: SingleChildScrollView(
             child: Column(
           children: [
+            // searchfield
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  labelText: "search",
+                  // prefixIcon: icon,
+                  border: const OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(25))),
+                  fillColor: AppColor.kPrimary,
+                  filled: true,
+                ),
+              ),
+            ),
             //On sale now
             const Listlite(
               title: "On sale now",
