@@ -53,7 +53,7 @@ class Homeview extends StatelessWidget {
                   // prefixIcon: icon,
                   border: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(25))),
-                  fillColor: AppColor.kPrimary,
+                  // fillColor:Color(value),
                   filled: true,
                 ),
               ),
